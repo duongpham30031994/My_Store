@@ -19,7 +19,7 @@ class PostView: UIView {
     static var instanceFromNib: PostView {
         return UINib(nibName: "PostView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! PostView
     }
-    func set(post: Post) {
+    func set(post: Product) {
         imageProduct.image = post.image
         cost.text = post.cost
     }

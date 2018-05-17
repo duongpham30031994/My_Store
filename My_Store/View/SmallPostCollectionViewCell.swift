@@ -16,6 +16,4 @@ class SmallPostCollectionViewCell: UICollectionViewCell {
     @IBAction func like(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
     }
-    
-    
 }

@@ -11,7 +11,7 @@ import UIKit
 class NewPostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var posts: [Post]?
+    var posts: [Product]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +26,7 @@ class NewPostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func set(posts: [Post], at indexPath: IndexPath) {
+    func set(posts: [Product], at indexPath: IndexPath) {
 //        collectionView.setup(numberOfItems: 3, padding: 10)
         self.posts = posts
         collectionView.reloadData()

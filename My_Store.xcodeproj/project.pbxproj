@@ -17,9 +17,15 @@
 		182425BF20AD220900032F6D /* NewPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182425BE20AD220900032F6D /* NewPostTableViewCell.swift */; };
 		182425C120AD223400032F6D /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182425C020AD223400032F6D /* PostView.swift */; };
 		182425C320AD223E00032F6D /* PostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182425C220AD223E00032F6D /* PostView.xib */; };
-		182425C720AD258D00032F6D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182425C620AD258D00032F6D /* Post.swift */; };
+		182425C720AD258D00032F6D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182425C620AD258D00032F6D /* Product.swift */; };
 		182425C920AD284E00032F6D /* SmallPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182425C820AD284E00032F6D /* SmallPostCollectionViewCell.swift */; };
 		18386FCF20AD403700251827 /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18386FCE20AD403700251827 /* UIView+Extentions.swift */; };
+		18386FD520AD62DF00251827 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18386FD420AD62DF00251827 /* MainViewController.swift */; };
+		18386FDC20AD801D00251827 /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18386FDB20AD801D00251827 /* MoreTableViewController.swift */; };
+		18386FDE20AD80FE00251827 /* AllProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18386FDD20AD80FE00251827 /* AllProductViewController.swift */; };
+		18386FE020AD81B100251827 /* DetailInfoProductController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18386FDF20AD81B100251827 /* DetailInfoProductController.swift */; };
+		18386FE220AD835A00251827 /* DataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18386FE120AD835A00251827 /* DataServices.swift */; };
+		18386FE420AD913400251827 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18386FE320AD913400251827 /* HeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +41,15 @@
 		182425BE20AD220900032F6D /* NewPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostTableViewCell.swift; sourceTree = "<group>"; };
 		182425C020AD223400032F6D /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		182425C220AD223E00032F6D /* PostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostView.xib; sourceTree = "<group>"; };
-		182425C620AD258D00032F6D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		182425C620AD258D00032F6D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		182425C820AD284E00032F6D /* SmallPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		18386FCE20AD403700251827 /* UIView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extentions.swift"; sourceTree = "<group>"; };
+		18386FD420AD62DF00251827 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		18386FDB20AD801D00251827 /* MoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
+		18386FDD20AD80FE00251827 /* AllProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllProductViewController.swift; sourceTree = "<group>"; };
+		18386FDF20AD81B100251827 /* DetailInfoProductController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoProductController.swift; sourceTree = "<group>"; };
+		18386FE120AD835A00251827 /* DataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServices.swift; sourceTree = "<group>"; };
+		18386FE320AD913400251827 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,22 +82,60 @@
 		182425A020AD134500032F6D /* My_Store */ = {
 			isa = PBXGroup;
 			children = (
-				182425C620AD258D00032F6D /* Post.swift */,
+				18386FDA20AD7F7500251827 /* Utilities */,
+				18386FD920AD7F5600251827 /* View */,
+				18386FD620AD720F00251827 /* Model */,
+				18386FD320AD621F00251827 /* Controller */,
 				182425A120AD134500032F6D /* AppDelegate.swift */,
-				182425BC20AD205B00032F6D /* HomeViewController.swift */,
-				182425C820AD284E00032F6D /* SmallPostCollectionViewCell.swift */,
-				182425BE20AD220900032F6D /* NewPostTableViewCell.swift */,
-				182425C020AD223400032F6D /* PostView.swift */,
-				182425C220AD223E00032F6D /* PostView.xib */,
 				182425A520AD134500032F6D /* Main.storyboard */,
 				182425AB20AD134500032F6D /* Assets.xcassets */,
-				182425BA20AD1DF200032F6D /* UILabel+Extentions.swift */,
-				18386FCE20AD403700251827 /* UIView+Extentions.swift */,
 				182425AD20AD134500032F6D /* LaunchScreen.storyboard */,
 				182425B020AD134500032F6D /* Info.plist */,
 				182425A820AD134500032F6D /* My_Store.xcdatamodeld */,
 			);
 			path = My_Store;
+			sourceTree = "<group>";
+		};
+		18386FD320AD621F00251827 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18386FD420AD62DF00251827 /* MainViewController.swift */,
+				182425BC20AD205B00032F6D /* HomeViewController.swift */,
+				18386FDB20AD801D00251827 /* MoreTableViewController.swift */,
+				18386FDD20AD80FE00251827 /* AllProductViewController.swift */,
+				18386FDF20AD81B100251827 /* DetailInfoProductController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18386FD620AD720F00251827 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18386FE120AD835A00251827 /* DataServices.swift */,
+				182425C620AD258D00032F6D /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18386FD920AD7F5600251827 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182425C820AD284E00032F6D /* SmallPostCollectionViewCell.swift */,
+				182425BE20AD220900032F6D /* NewPostTableViewCell.swift */,
+				18386FE320AD913400251827 /* HeaderTableViewCell.swift */,
+				182425C020AD223400032F6D /* PostView.swift */,
+				182425C220AD223E00032F6D /* PostView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18386FDA20AD7F7500251827 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				182425BA20AD1DF200032F6D /* UILabel+Extentions.swift */,
+				18386FCE20AD403700251827 /* UIView+Extentions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,15 +211,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18386FE220AD835A00251827 /* DataServices.swift in Sources */,
+				18386FE420AD913400251827 /* HeaderTableViewCell.swift in Sources */,
 				182425C120AD223400032F6D /* PostView.swift in Sources */,
 				182425BF20AD220900032F6D /* NewPostTableViewCell.swift in Sources */,
 				182425A220AD134500032F6D /* AppDelegate.swift in Sources */,
-				182425C720AD258D00032F6D /* Post.swift in Sources */,
+				182425C720AD258D00032F6D /* Product.swift in Sources */,
 				182425AA20AD134500032F6D /* My_Store.xcdatamodeld in Sources */,
 				182425BB20AD1DF200032F6D /* UILabel+Extentions.swift in Sources */,
 				18386FCF20AD403700251827 /* UIView+Extentions.swift in Sources */,
+				18386FE020AD81B100251827 /* DetailInfoProductController.swift in Sources */,
 				182425C920AD284E00032F6D /* SmallPostCollectionViewCell.swift in Sources */,
 				182425BD20AD205B00032F6D /* HomeViewController.swift in Sources */,
+				18386FDC20AD801D00251827 /* MoreTableViewController.swift in Sources */,
+				18386FD520AD62DF00251827 /* MainViewController.swift in Sources */,
+				18386FDE20AD80FE00251827 /* AllProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 677FZ5Q37X;
 				INFOPLIST_FILE = My_Store/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "duongpham.My-Store";
@@ -321,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 677FZ5Q37X;
 				INFOPLIST_FILE = My_Store/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "duongpham.My-Store";
