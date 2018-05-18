@@ -17,13 +17,8 @@ class MainViewController: UIViewController {
     
     var isSlideMenuOpen: Bool = false {
         didSet {
-            if isSlideMenuOpen {
-                leadingConstraintSlideMenu.constant = 0
-                cloverButton.isHidden = false
-            } else {
-                leadingConstraintSlideMenu.constant = -(0.6 * UIScreen.main.bounds.width + 40)
-                cloverButton.isHidden = true
-            }
+            leadingConstraintSlideMenu.constant = isSlideMenuOpen ? 0 : -(0.6 * UIScreen.main.bounds.width + 40)
+            cloverButton.isHidden = !isSlideMenuOpen
             UIView.animate(withDuration: 0.35) {
                 self.view.layoutIfNeeded()
             }

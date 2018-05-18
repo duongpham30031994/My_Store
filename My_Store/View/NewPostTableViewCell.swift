@@ -11,24 +11,27 @@ import UIKit
 class NewPostTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    weak var delegate: NewPostTableViewCellDelegate?
     var posts: [Product]?
+    var section: IndexPath!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        collectionView.setup(numberOfItems: 3, padding: 10)
+        collectionView.register(UINib(nibName: "SmallPost", bundle: nil), forCellWithReuseIdentifier: "smallPost")
+        collectionView.setup_horizotal(numberOfItems: 3, padding: 10)
         
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
     func set(posts: [Product], at indexPath: IndexPath) {
-//        collectionView.setup(numberOfItems: 3, padding: 10)
         self.posts = posts
+        section = indexPath
         collectionView.reloadData()
     }
 
@@ -50,17 +53,10 @@ extension NewPostTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
         cell.costPost.text = post.cost
         return cell
     }
-}
-
-extension UICollectionView {
-    func setup(numberOfItems: CGFloat, padding: CGFloat) {
-        let layout = UICollectionViewFlowLayout()
-        let widthScreen = UIScreen.main.bounds.size.width
-        let width = (widthScreen - padding * 2 - padding * (numberOfItems - 1))/numberOfItems
-        layout.itemSize = CGSize(width: width, height: 160)
-        layout.sectionInset = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
-        layout.minimumLineSpacing = padding
-        layout.scrollDirection = .horizontal
-        self.collectionViewLayout = layout
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if section != nil {
+            delegate?.collectionView(didSelectItemIn: section, at: indexPath)
+        }
     }
 }

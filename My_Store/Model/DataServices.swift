@@ -55,7 +55,7 @@ class DataServices {
         }
     }
     
-    func loadSample() {
+    private func loadSample() {
         guard let context = _fetchedResultsController?.managedObjectContext else { return }
         
         let onlyOnlyChic = Product(name: "ONLY ONLCHIC", cost: "500.000đ", image: #imageLiteral(resourceName: "1"))

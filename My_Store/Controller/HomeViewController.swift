@@ -9,16 +9,16 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     let fetchedResultsController = DataServices.shared.fetchedResultsController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let post = Product(name: "Áo bra ren có dây", cost: "60.000d", image: #imageLiteral(resourceName: "ao ren"))
         let headerView = PostView.instanceFromNib
         headerView.set(post: post)
+        
         tableView.tableHeaderView = headerView
         
         tableView.tableHeaderView?.frame.size = CGSize(width: tableView.frame.width, height: 300)
@@ -48,10 +48,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row % 2 == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! HeaderTableViewCell
+            
+            // protocol 4 nhan uy quyen
+            cell.delegate = self
             cell.nameCategory.text = categoryProduct.name
+            cell.indexPath = indexPathCategory
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NewPostTableViewCell
+            cell.delegate = self
             cell.set(posts: categoryProduct.products ?? [], at: indexPathCategory)
             return cell
         }
@@ -59,5 +64,24 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.row % 2 == 0 ? 44 : 200
+    }
+}
+
+//MARK: - HeaderTableViewCellDelegate
+extension HomeViewController: HeaderTableViewCellDelegate {
+    func tableView(didSelectHeaderAt indexPath: IndexPath) {
+        let allProductControlller = AllProductViewController.instance
+        allProductControlller.indexPathForSelected = indexPath
+        navigationController?.pushViewController(allProductControlller, animated: true)
+    }
+}
+
+//MARK: - CollectionViewDelegate
+extension HomeViewController: NewPostTableViewCellDelegate {
+    func collectionView(didSelectItemIn section: IndexPath, at indexPath: IndexPath) {
+        let detailInfoProductController = DetailInfoProductController.instance
+        detailInfoProductController.section = section
+        detailInfoProductController.indexPath = indexPath
+        navigationController?.pushViewController(detailInfoProductController, animated: true)
     }
 }
