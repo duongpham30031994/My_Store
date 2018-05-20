@@ -30,4 +30,5 @@ extension UICollectionView {
         layout.scrollDirection = .vertical
         self.collectionViewLayout = layout
     }
+    
 }

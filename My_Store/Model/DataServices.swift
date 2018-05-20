@@ -11,6 +11,14 @@ import CoreData
 
 class DataServices {
     static let shared: DataServices = DataServices()
+    
+    func getUserInfo(complete: (User)->Void) {
+        let decoded  = UserDefaults.standard.object(forKey: "user") as! Data
+        guard let user = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? User else { return }
+        complete(user)
+    }
+
+    
     // MARK: - Fetched results controller
     
     var fetchedResultsController: NSFetchedResultsController<CategoryProduct> {

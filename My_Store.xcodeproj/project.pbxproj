@@ -32,6 +32,8 @@
 		18386FEE20AE53F900251827 /* Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18386FED20AE53F900251827 /* Login_ViewController.swift */; };
 		18386FF220AE765900251827 /* SmallPost.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18386FF120AE765900251827 /* SmallPost.xib */; };
 		187CF1D220AE83910063B2F8 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CF1D120AE83910063B2F8 /* Protocol.swift */; };
+		18C65FBB20AFC37B00EB45C1 /* MenuTB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C65FBA20AFC37B00EB45C1 /* MenuTB.swift */; };
+		18C65FBF20AFC4E400EB45C1 /* Extension+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C65FBE20AFC4E400EB45C1 /* Extension+UIImageView.swift */; };
 		669C6575B1C227DFAD330DE9 /* Pods_My_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4228D9A56224A0037D4549 /* Pods_My_Store.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		18386FED20AE53F900251827 /* Login_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ViewController.swift; sourceTree = "<group>"; };
 		18386FF120AE765900251827 /* SmallPost.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallPost.xib; sourceTree = "<group>"; };
 		187CF1D120AE83910063B2F8 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		18C65FBA20AFC37B00EB45C1 /* MenuTB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTB.swift; sourceTree = "<group>"; };
+		18C65FBE20AFC4E400EB45C1 /* Extension+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImageView.swift"; sourceTree = "<group>"; };
 		404BDC949603F5D3D136995F /* Pods-My_Store.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My_Store.release.xcconfig"; path = "Pods/Target Support Files/Pods-My_Store/Pods-My_Store.release.xcconfig"; sourceTree = "<group>"; };
 		963CE66BAEAD678A3C75A2C6 /* Pods-My_Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My_Store.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My_Store/Pods-My_Store.debug.xcconfig"; sourceTree = "<group>"; };
 		BA4228D9A56224A0037D4549 /* Pods_My_Store.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Store.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +128,7 @@
 				18386FDB20AD801D00251827 /* MoreTableViewController.swift */,
 				18386FDD20AD80FE00251827 /* AllProductViewController.swift */,
 				18386FDF20AD81B100251827 /* DetailInfoProductController.swift */,
+				18C65FBA20AFC37B00EB45C1 /* MenuTB.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				182425BA20AD1DF200032F6D /* UILabel+Extentions.swift */,
 				18386FCE20AD403700251827 /* UIView+Extentions.swift */,
 				18386FE720ADACA200251827 /* UICollectionView + Extensions.swift */,
+				18C65FBE20AFC4E400EB45C1 /* Extension+UIImageView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -314,12 +320,14 @@
 				18386FEA20ADB5B600251827 /* NotificationKey.swift in Sources */,
 				182425C120AD223400032F6D /* PostView.swift in Sources */,
 				182425BF20AD220900032F6D /* NewPostTableViewCell.swift in Sources */,
+				18C65FBF20AFC4E400EB45C1 /* Extension+UIImageView.swift in Sources */,
 				182425A220AD134500032F6D /* AppDelegate.swift in Sources */,
 				182425C720AD258D00032F6D /* Product.swift in Sources */,
 				182425AA20AD134500032F6D /* My_Store.xcdatamodeld in Sources */,
 				182425BB20AD1DF200032F6D /* UILabel+Extentions.swift in Sources */,
 				18386FCF20AD403700251827 /* UIView+Extentions.swift in Sources */,
 				18386FE020AD81B100251827 /* DetailInfoProductController.swift in Sources */,
+				18C65FBB20AFC37B00EB45C1 /* MenuTB.swift in Sources */,
 				18386FEE20AE53F900251827 /* Login_ViewController.swift in Sources */,
 				182425C920AD284E00032F6D /* SmallPostCollectionViewCell.swift in Sources */,
 				182425BD20AD205B00032F6D /* HomeViewController.swift in Sources */,
